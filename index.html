@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Loan Calculator</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-bg">
+    <div class="container">
+      <div class="calculator">
+        <header class="calculator-header">
+          <h1>Smart Loan Calculator</h1>
+          <p class="subtitle">Calculate your monthly payments and total interest easily</p>
+        </header>
+
+        <div class="calculator-body">
+          <!-- left inputs -->
+          <div class="input-section">
+            <div class="input-group">
+              <label for="amount">Loan Amount ($)</label>
+              <div class="input-with-icon">
+                <input type="number" id="amount" placeholder="e.g., 250000" min="0" />
+                <span class="input-icon">$</span>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="interest">Annual Interest Rate (%)</label>
+              <div class="input-with-icon">
+                <input type="number" id="interest" placeholder="e.g., 5.5" step="0.01" min="0" />
+                <span class="input-icon">%</span>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="years">Loan Term (Years)</label>
+              <div class="input-with-icon">
+                <input type="number" id="years" placeholder="e.g., 30" min="0" />
+                <span class="input-icon">Yrs</span>
+              </div>
+            </div>
+
+            <button id="calculateBtn" class="btn-primary">Calculate Loan <span class="arrow">→</span></button>
+          </div>
+
+          <!-- right results -->
+          <aside class="results" id="results">
+            <h2>Loan Summary</h2>
+
+            <div class="result-card">
+              <div class="result-item">
+                <div class="label">Monthly Payment</div>
+                <div class="value" id="monthly">$0.00</div>
+              </div>
+
+              <div class="result-item">
+                <div class="label">Total Payment</div>
+                <div class="value" id="total">$0.00</div>
+              </div>
+
+              <div class="result-item">
+                <div class="label">Total Interest</div>
+                <div class="value" id="totalInterest">$0.00</div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
